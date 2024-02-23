@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/txt_login"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Login"
+        android:textColor="@color/white"
+        android:textSize="35sp"
+        android:textStyle="bold"
+        android:layout_margin="50dp"
+        android:gravity="center"/>
+
+    <EditText
+        android:id="@+id/edt_usuario"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/txt_login"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="10dp"
+        android:background="#30ffffff"
+        android:drawableStart="@drawable/ic_person24"
+        android:drawablePadding="20dp"
+        android:hint="Usuário"
+        android:padding="20dp"
+        android:inputType="text"
+        android:textColor="@color/white"
+        android:textColorHint="@color/white" />
+
+    <EditText
+        android:id="@+id/edt_senha"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/edt_usuario"
+        android:background="#30ffffff"
+        android:hint="Senha"
+        android:textColorHint="@color/white"
+        android:textColor="@color/white"
+        android:layout_margin="10dp"
+        android:padding="20dp"
+        android:inputType="textPassword|numberPassword"
+        android:drawableStart="@drawable/ic_info_24"
+        android:drawablePadding="20dp" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btn_login"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/edt_senha"
+        android:text="Entrar"
+        android:backgroundTint="#2196F3"
+        android:layout_centerHorizontal="true"
+        android:layout_margin="20dp" />
+
+    <TextView
+        android:id="@+id/txt_restaurar_senha"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/btn_login"
+        android:text="Esqueceu a Senha?"
+        android:textColor="@color/white"
+        android:layout_centerHorizontal="true"
+        android:layout_margin="20dp"/>
+
+    <TextView
+        android:id="@+id/txt_outros_acessos"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/linear_icons_sociais"
+        android:text="Faça login com"
+        android:layout_centerHorizontal="true"/>
+
+    <LinearLayout
+        android:id="@+id/linear_icons_sociais"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:gravity="center">
+
+        <ImageView
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_margin="20dp"
+            android:src="@drawable/google"/>
+        <ImageView
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_margin="20dp"
+            android:src="@drawable/facebook"/>
+        <ImageView
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_margin="20dp"
+            android:src="@drawable/twitter"/>
+    </LinearLayout>
+</RelativeLayout>
